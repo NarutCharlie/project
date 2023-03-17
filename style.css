@@ -59,6 +59,20 @@ nav ul li a:hover::after{
 .header-text h1 span {
     color: #050608;
 }
+.header-text h3 span a {
+    text-decoration: none;
+    color: #45b4119a;
+}
+.header-text h2 span1 {
+    color: crimson;
+}.header-text h2 span4 {
+    color: darkgrey;
+}.header-text h2 span3 {
+    color: green;
+}.header-text h2 span2 {
+    color: darkgoldenrod;
+}
+
 /* --------------ABOUT---------- */
 #about{
     padding: 49px 0;
