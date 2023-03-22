@@ -64,19 +64,19 @@ nav ul li a:hover::after{
     color: #45b4119a;
 }
 .header-text h2 span1 {
-    color: crimson;
+    color: #b3aa93;
 }.header-text h2 span4 {
-    color: darkgrey;
+    color: #b3aa93;
 }.header-text h2 span3 {
-    color: green;
+    color: #b3aa93;
 }.header-text h2 span2 {
-    color: darkgoldenrod;
+    color: #b3aa93;
 }
 
 /* --------------ABOUT---------- */
 #about{
     padding: 49px 0;
-    color: cadetblue;
+    color: rgb(36, 220, 226);
 }
 .row{
     display: flex;
@@ -103,11 +103,53 @@ nav ul li a:hover::after{
     display:flex;
     margin: 20px 0 40px;
 }
-.tablinks{
+.tab-links{
     margin-right:50px ;
     font-size: 18px;
     font-weight: 600;
     cursor: pointer;
     position: relative;
     color: rgb(178, 149, 206);
+}
+.tab-links::after {
+    content: '';
+    width: 0;
+    height: 3px;  
+    background-color:#ff4747;
+    position: absolute; 
+    left: 0; 
+    bottom: -8px;
+    transition: 0.5s;
+}
+.tab-links.activelink::after {
+    width: 50%;
+}
+.tabcontents ul li{
+    list-style: none;
+    margin: 10px 0;
+}
+.tabcontents ul li span{
+    color: #054ddd;
+    font-size: 15px;
+}
+.tabcontents{
+    display: none;
+}
+.tabcontents.active-tab{
+    display: block;
+ } 
+
+ /* ---------------------Services------------------ */
+ /* #services{
+    padding: 320px 12px;
+ } */
+.serviceslist{
+    display: grid;
+    grid-template-rows: repeat(auto-fit, minmax(100px, 200%));
+    grid-gap: 10vh;
+    margin-top: 60px;
+}
+#x{
+    padding: 0px;
+    margin-bottom: 20px;
 }

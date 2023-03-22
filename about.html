@@ -13,6 +13,7 @@
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
                 <li><a href="conatct.html">Contact</a></li>
             </ul>
         </nav>
@@ -28,13 +29,50 @@
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non voluptatem quis quas nesciunt ullam maxime, facere ipsa aut minus fuga corporis ab, eligendi in fugiat doloremque! Blanditiis qui at praesentium impedit ad ipsam beatae repellat illo corporis nostrum. Aliquam consequuntur placeat sunt labore, modi pariatur voluptas quaerat cupiditate ratione.</p>
     
                     <div class="tabtitles">
-                        <p class="tablinks">Education </p>
-                        <p class="tablinks">Skills</p>
-                        <p class="tablinks">Experience</p>
+                        <p class="tab-links activelink" onclick="opentab('education')">Education </p>
+                        <p class="tab-links 2" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links 3" onclick="opentab('experience')">Experience</p>
+                    </div>
+                    <div class="tabcontents active-tab" id="education">
+                        <ul>
+                            <li><span>2019</span><br>Completed SSLC</li>
+                            <li><span>2021</span><br>Completed PUC</li>
+                            <li><span>2022</span><br>Pursuing BSc</li>
+                        </ul>
+                    </div>
+                    <div class="tabcontents" id="skills">
+                        <ul>
+                            <li><span>Web Development</span><br>Building & Designing Website</li>
+                            <li><span>UI/UX</span><br>Designing Web & App Interface</li>
+                            <li><span>Video Editing</span><br>Editing As Well As Designing Videos </li>
+                            <li><span>Social Media Marketing</span><br>Developing Business Through Producing & Posting Content Through Social Media</li>
+                        </ul>
+                    </div>
+                    <div class="tabcontents" id="experience">
+                        <ul>
+                            <li>Fresher</li> 
+                            <li>Freelancer</li> 
+                        </ul>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tabcontents");
+
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("activelink");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("activelink")
+            document.getElementById(tabname).classList.add("active-tab")
+        }
+    </script>
 </body>
 </html>
