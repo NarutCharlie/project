@@ -180,3 +180,8 @@ nav ul li a:hover::after{
     background: #025c72;
     transform: translateY(-10px);
 }
+
+/* ------------------Contact---------------- */
+.socialicons{
+    font-size: 21px;
+}
