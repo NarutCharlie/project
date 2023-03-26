@@ -182,6 +182,58 @@ nav ul li a:hover::after{
 }
 
 /* ------------------Contact---------------- */
-.socialicons{
-    font-size: 21px;
+h1{
+    padding-bottom:3%;
+    margin-left: 0px;
+    padding-left: 10px;
+}
+/* p{
+    font-size: 24px;
+    font-weight: 600;
+    font-style: italic;
+} */
+.contactleft p{
+    padding-left: 17px;
+    font-size: 29px;
+    font-weight: 600;
+    font-style: italic;
+}
+.contactleft a{
+    text-decoration: none;
+    color: #050608;
+}
+.contactleft i {
+    padding-right:17px;
+    font-size: 26px;
+}
+/* .socialicons a i{
+    padding-left: 14px;
+    padding-right: 0%;
+    font-size: 35px;
+    transition: transform 0.5s color 0.5s;;
+    margin-top: 3%;
+    color: #d4d0d0;
+} */
+.contactleft{
+    flex-basis: 90%;
+}
+.contactright{
+    flex-basis: 100%;
+}
+/* .socialicons a i:hover{
+    color: rgb(255, 42, 42);
+    transform: translateY(-9px);
+} */
+.socialicons a i{
+    padding-left: 14px;
+    padding-right: 0%;
+    font-size: 35px;
+    transition: transform 0.5s, color 0.5s; /* Add color transition */
+    margin-top: 3%;
+    color: #d4d0d0; /* Set default icon color */
+}
+
+.socialicons a i:hover{
+    color: rgb(187, 35, 35) !important; /* Set hover icon color */
+    transform: translateY(-9px);
 }
