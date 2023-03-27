@@ -260,3 +260,54 @@ form input, form textarea{
     padding-bottom: 1%;
     color: chocolate;
 }
+form .btn.btn2{
+    cursor: pointer;
+    margin-left: 0px;
+    margin-top: 17px;
+}
+.copyright{
+    width: 100%;
+    text-align: center;
+    padding: 1% ;
+    background: #352727;
+    font-weight: 300;
+    margin-top: 39px;
+    font-style: italic;
+}
+.copyright i {
+    color: #ffb157 !important;
+    margin: 10px;
+}
+/* ------------css for small screen ----------*/
+nav #img {
+    display: none;
+}
+@media only screen and (max-width: 600px){
+    #header{
+        background-image: none;
+    }
+    .header-text{
+        margin-top: 100%;
+        font-size: 16px;
+    }
+    .header-text h1{
+        font-size: 30px;
+    }
+    nav #img {
+        display: block;
+        font-size: 20px;
+    }
+    nav ul{
+        background: #df0b0b;
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 200px;
+        height: 100vh;
+        padding-top: 49px;
+    }
+    nav ul li{
+        display: block;
+        margin: 25px;
+    }
+}
