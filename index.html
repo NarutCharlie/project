@@ -12,14 +12,14 @@
     <div id="header">
         <div class="container">
             <nav>
-                <ul>
+                <ul id="sidemenu">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About</a></li>
                     <li><a href="services.html">Services</a></li>
                     <li><a href="contact.html">Contact</a></li>
-                    <i id="img" class="fa-sharp fa-solid fa-xmark fa-lg style="color: #f7f7f7;"></i>
+                    <i id="img" class="fa-sharp fa-solid fa-xmark fa-lg style="color: #f7f7f7;" onclick="closemenu()"></i>
                 </ul>
-                <i id="img" class="fa-sharp fa-solid fa-bars fa-sg" style="color: #f7f7f7;"></i>
+                <i id="img" class="fa-sharp fa-solid fa-bars fa-sg" style="color: #f7f7f7;" onclick="openmenu()"></i>
             </nav>
             <div class="header-text">
                 <p>Web Developer | 2 Stroke Freak</p>
@@ -27,6 +27,9 @@
                 <h3>More <span><a href="about.html">About Me</a></span>...</h3>
                 <h2><span1>Eat</span1> <span2>Sleep</span2> <span3>Ride</span3> <span4>Code</span4></h2>
             </div>
+        </div>
+        <div class="copyright">
+            <p><i class="fa-regular fa-registered fa-sg" style="color: #696969;"></i>Copyright @ NarutCharlie. All Rights Reserved</p>
         </div>
     </div>
     <!-- =============ABOUT=========== -->
@@ -50,5 +53,16 @@
         </div>
     </div> -->
     <!-- ---------------PRICING------------ -->
+
+    <script>
+        var sidemenu = document.getElementById("sidemenu");
+
+        function openmenu(){
+           sidemenu.style.right = '0';
+        }
+        function closemenu(){
+           sidemenu.style.right = '-200px';
+        }
+   </script>
 </body>
 </html>

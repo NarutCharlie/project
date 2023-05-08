@@ -11,14 +11,14 @@
 <body>
     <div class="container">
         <nav>
-            <ul>
+            <ul id="sidemenu">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="services.html">Services</a></li>
                 <li><a href="contact.html">Contact</a></li>
-                <i id="img" class="fa-sharp fa-solid fa-xmark fa-lg style="color: #f7f7f7;"></i>
+                <i id="img" class="fa-sharp fa-solid fa-xmark fa-lg style="color: #f7f7f7;" onclick="closemenu()"></i>
             </ul>
-            <i id="img" class="fa-sharp fa-solid fa-bars fa-sg" style="color: #ffffff;"></i>
+            <i id="img" class="fa-sharp fa-solid fa-bars fa-sg" style="color: #ffffff;" onclick="openmenu()"></i>
         </nav>
     </div>    
     <div id="about">
@@ -61,6 +61,9 @@
             </div>
         </div>
     </div>
+    <div class="copyright">
+        <p><i class="fa-regular fa-registered fa-sg" style="color: #696969;"></i>Copyright @ NarutCharlie. All Rights Reserved</p>
+    </div>
 
     <script>
         var tablinks = document.getElementsByClassName("tab-links");
@@ -77,5 +80,15 @@
             document.getElementById(tabname).classList.add("active-tab")
         }
     </script>
+    <script>
+        var sidemenu = document.getElementById("sidemenu");
+
+        function openmenu(){
+           sidemenu.style.right = '0';
+        }
+        function closemenu(){
+           sidemenu.style.right = '-200px';
+        }
+   </script>
 </body>
 </html>
