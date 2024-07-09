@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://kit.fontawesome.com/3493d26ef1.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <ul id="sidemenu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <!-- <li><a href="contact.html">Contact</a></li> -->
+                <i id="img" class="fa-sharp fa-solid fa-xmark fa-lg style="color: #f7f7f7;" onclick="closemenu()"></i>
+            </ul>
+            <i id="img" class="fa-sharp fa-solid fa-bars fa-sg" style="color: #ffffff;" onclick="openmenu()"></i>
+        </nav>
+    </div>    
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="aboutcol-1">
+                    <img src="./IMG_20220803_195809_330 1.png" >
+                </div>
+                <div class="aboutcol-2">
+                    <h1 class="subtitle">About Me</h1>
+                    <p>A motivated and detail-oriented BSc graduate [Physics & Chemistry] seeking an entry-level position in the IT or Non-IT sector. Possessing foundational skills in HTML and CSS demonstrated through the creation of a personal portfolio website. Eager to apply academic knowledge and develop practical skills in a dynamic and growth-oriented environment.</p>
+    
+                    <div class="tabtitles">
+                        <p class="tab-links activelink" onclick="opentab('education')">Education </p>
+                        <p class="tab-links 2" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links 3" onclick="opentab('experience')">Experience</p>
+                    </div>
+                    <div class="tabcontents active-tab" id="education">
+                        <ul>
+                            <li><span>2019</span><br>Completed SSLC</li>
+                            <li><span>2021</span><br>Completed PUC</li>
+                            <li><span>2022</span><br>Pursuing BSc</li>
+                        </ul>
+                    </div>
+                    <div class="tabcontents" id="skills">
+                        <ul>
+                            <li><span>Web Development</span><br>Building & Designing Website</li>
+                            <li><span>UI/UX</span><br>Designing Web & App Interface</li>
+                            <li><span>Video Editing</span><br>Editing As Well As Designing Videos </li>
+                            <li><span>Social Media Marketing</span><br>Developing Business Through Producing & Posting Content Through Social Media</li>
+                        </ul>
+                    </div>
+                    <div class="tabcontents" id="experience">
+                        <ul>
+                            <li>Ready to start my career as a fresher</li> 
+                            <!-- <li>Freelancer</li>  -->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- <div class="copyright">
+        <p><i class="fa-regular fa-registered fa-sg" style="color: #696969;"></i>Copyright @ NarutCharlie. All Rights Reserved</p>
+    </div> -->
+
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tabcontents");
+
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("activelink");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("activelink")
+            document.getElementById(tabname).classList.add("active-tab")
+        }
+    </script>
+    <script>
+        var sidemenu = document.getElementById("sidemenu");
+
+        function openmenu(){
+           sidemenu.style.right = '0';
+        }
+        function closemenu(){
+           sidemenu.style.right = '-200px';
+        }
+   </script>
+</body>
+</html>
